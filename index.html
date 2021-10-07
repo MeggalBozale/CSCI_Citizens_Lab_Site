@@ -22,7 +22,7 @@
         
         body {
             
-            background-color: rgb(93, 158, 189);
+            background-color: rgb(50, 100, 210);
             
         }
         
@@ -32,23 +32,48 @@
             right: -350px;
             
         }
+        
+        #userinfo{
+            background: white;
+            text-align: center;
+            outline: none;
+            width:40%;
+            
+            border-top:none;
+            border-left:none;
+            
+            border-right:4px solid rgb(150,150,150);
+            border-bottom:4px solid rgb(150,150,150);
+        }
+        
+        #buttonSubmit{
+            border-top:none;
+            border-left:none;
+            
+            border-right:4px solid rgb(0, 150, 100);
+            border-bottom:4px solid rgb(0, 150, 100);
+            width:40%;
+            background: rgb(0, 200, 150);
+            
+            color: rgb(50,50,50);
+        }
     </style>
     <body>
         <h1>Hacktivist</h1>
         <h1>Central</h1>
         
         <form class = 'inpt'>
-        <input placeholder = 'UUID' required>
+        <input id="userinfo" type="text" placeholder = 'UUID' required>
         
         <br>
         <br>
         
-        <input placeholder = 'Access Code' required>
+        <input id="userinfo" type="text" placeholder = 'Access Code' required>
         
         <br>
         <br>
         
-        <input type="submit" value="Enter Login Information">
+        <input id="buttonSubmit" type="submit" value="Enter Login Information">
         </form>
     </body>
     <script>
