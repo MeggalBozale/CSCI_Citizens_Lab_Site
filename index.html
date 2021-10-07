@@ -2,18 +2,34 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>CyberStart Web Layout</title>
+        <title>Hacktivist Web Layout</title>
     </head>
     <style>
         h1 {
             
             text-align: center;
+            font-family: 'sans serif';
+            
+            color: rgb(255, 255, 255);
             
         }
         
-        #inpt {
+        .inpt {
             
             text-align: center;
+            
+        }
+        
+        body {
+            
+            background-color: rgb(93, 158, 189);
+            
+        }
+        
+        #img-right {
+            
+            position: relative;
+            right: -350px;
             
         }
     </style>
@@ -21,7 +37,7 @@
         <h1>Hacktivist</h1>
         <h1>Central</h1>
         
-        <form id = 'inpt'>
+        <form class = 'inpt'>
         <input placeholder = 'UUID' required>
         
         <br>
@@ -36,6 +52,30 @@
         </form>
     </body>
     <script>
-        var x = 0;
+        var userID = document.getElementById('userID');
+        var accessCode = document.getElementById('access-code');
+        var button = document.getElementById('button');
+        
+        var inptID;
+        var inptAccessCode;
+        
+        userID.onInput = function () { 
+            inptID = userID.value; 
+            console.log(inptID);
+        }
+        
+        accessCode.onInput = function () {
+            inptAccessCode = accessCode.value;
+            console.log(inptAccessCode);
+        }
+        
+        button.onClick = function () {
+            if (inptID == "12345" && inptAccessCode == "test") {
+                javascript:alert('Access Granted');
+            }
+            else {
+                javascript:alert('Access Denied');
+            }
+        }
     </script>
 </html>
